@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Panel</title>
+<link rel="icon" href="logo.png">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container mt-4">
+<h2>Admin Panel</h2>
+<div class="row">
+
+<!-- ADD PRODUCT -->
+<div class="col-md-6">
+<h4>Add Product</h4>
+<select id="addCategory" class="form-control mb-2">
+<option value="panel">Solar Panels</option>
+<option value="battery">Batteries</option>
+<option value="lcd">LCD Displays</option>
+<option value="inverter">Inverters</option>
+<option value="controller">Controllers</option>
+<option value="light">Solar Lights</option>
+</select>
+<input id="addName" class="form-control mb-2" placeholder="Product Name">
+<input id="addPrice" class="form-control mb-2" placeholder="Price">
+<textarea id="addDesc" class="form-control mb-2" placeholder="Description"></textarea>
+<input type="file" id="addImage" class="form-control mb-2">
+<button class="btn btn-success" onclick="addProduct()">Add Product</button>
+</div>
+
+<!-- UPDATE PRODUCT -->
+<div class="col-md-6">
+<h4>Update Product</h4>
+<select id="updateCategory" class="form-control mb-3" onchange="loadProducts()">
+<option value="">Select Category</option>
+<option value="panel">Solar Panels</option>
+<option value="battery">Batteries</option>
+<option value="lcd">LCD Displays</option>
+<option value="inverter">Inverters</option>
+<option value="controller">Controllers</option>
+<option value="light">Solar Lights</option>
+</select>
+<div id="productList"></div>
+</div>
+
+</div>
+</div>
+<button class="btn btn-danger" style="text-align:center; margin-left: 7%; margin-top: 2%;" onclick="logout()">Logout</button>
+
+<script src="admin.js"></script>
+</body>
+</html>
